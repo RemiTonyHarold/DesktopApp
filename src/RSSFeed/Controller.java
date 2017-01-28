@@ -6,7 +6,9 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.concurrent.Worker;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.web.WebView;
@@ -23,12 +25,9 @@ import java.util.ResourceBundle;
 
 public class Controller {
     public WebView webview;
-    @FXML
-    private ResourceBundle resources;
-    @FXML
-    private URL location;
-    @FXML
+    public Label webviewTitleLabel;
     public ListView lvNews;
+    public News selectedNews;
 
     private News[] newses = {};
     private ObservableList observableList = FXCollections.observableArrayList();
@@ -44,9 +43,21 @@ public class Controller {
         lvNews.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-                webview.getEngine().load(newses[newValue.intValue()].getLink());
+                selectedNews = newses[newValue.intValue()];
+                webview.getEngine().load(selectedNews.getLink());
+                webviewTitleLabel.setText("Chargement de " + selectedNews.getTitle());
             }
         });
+        webview.getEngine().getLoadWorker().stateProperty().addListener(
+                (ObservableValue<? extends Worker.State> observable,
+                 Worker.State oldValue,
+                 Worker.State newValue) -> {
+                    if( newValue != Worker.State.SUCCEEDED ) {
+                        return;
+                    }
+                    webviewTitleLabel.setText(selectedNews.getTitle());
+                    // Your logic here
+                });
     }
 
     @FXML
@@ -54,7 +65,6 @@ public class Controller {
         assert lvNews != null : "fx:id=\"lvNews\" was not injected: check your FXML file 'CustomList.fxml'.";
         loadNewses();
         setListView();
-        webview.getEngine().load("http://google.fr");
     }
 
     private void loadNewses() {
@@ -73,8 +83,9 @@ public class Controller {
                 }
             }
         };
-        runnable.run();
+        new Thread(runnable).run();
     }
+
 
     public static String getHTML(String urlToRead) throws Exception {
         StringBuilder result = new StringBuilder();
