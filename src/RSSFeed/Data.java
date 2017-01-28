@@ -1,6 +1,7 @@
 package RSSFeed;
 
 import RSSFeed.Model.News;
+import RSSFeed.Utils.TimeAgo;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
@@ -10,6 +11,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.web.WebView;
 
 import java.io.IOException;
+import java.util.Date;
 
 /**
  * Created by fritsc_h on 28/01/2017.
@@ -42,7 +44,7 @@ public class Data {
     public void setInfo(News news)
     {
         label1.setText(news.getTitle());
-        label2.setText(news.getPubDate().toString());
+        label2.setText(TimeAgo.toRelative(news.getPubDate(), new Date(), 1));
         description.setText(news.getDescription());
 
     }
