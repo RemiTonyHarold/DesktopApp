@@ -3,6 +3,7 @@ package RSSFeed;
 import RSSFeed.Model.News;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -30,6 +31,7 @@ public class Data {
         try
         {
             fxmlLoader.load();
+            vBox.setPadding(new Insets(10));
         }
         catch (IOException e)
         {
