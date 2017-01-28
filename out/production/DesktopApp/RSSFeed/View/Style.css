@@ -11,5 +11,5 @@
 }
 
 .list-cell:filled:hover {
-    -fx-background-color: whitesmoke;
+    -fx-background-color: white;
 }
