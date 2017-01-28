@@ -1,5 +1,6 @@
 package RSSFeed;
 
+import RSSFeed.Model.News;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -9,6 +10,7 @@ import javafx.util.Callback;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -20,24 +22,24 @@ public class Controller {
     @FXML
     public ListView lvNews;
 
-    private List<String> stringList     = new ArrayList<>(5);
+    private List<News> newses = new ArrayList<>(5);
     private ObservableList observableList = FXCollections.observableArrayList();
 
     public void setListView(){
+        newses.add(new News("description1", new Date(), "title1"));
+        newses.add(new News("description2", new Date(), "title2"));
+        newses.add(new News("description3", new Date(), "title3"));
+        newses.add(new News("description4", new Date(), "title4"));
+        newses.add(new News("description5", new Date(), "title5"));
 
-        stringList.add("String 1");
-        stringList.add("String 2");
-        stringList.add("String 3");
-        stringList.add("String 4");
-
-        observableList.setAll(stringList);
+        observableList.setAll(newses);
 
         lvNews.setItems(observableList);
 
         lvNews.setCellFactory(
-                new Callback<ListView<String>, ListCell<String>>() {
+                new Callback<ListView<News>, ListCell<News>>() {
                     @Override
-                    public ListCell<String> call(ListView<String> listView) {
+                    public ListCell<News> call(ListView<News> listView) {
                         return new NewsListCell();
                     }
                 });

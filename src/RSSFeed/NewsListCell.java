@@ -1,19 +1,20 @@
 package RSSFeed;
 
+import RSSFeed.Model.News;
 import javafx.scene.control.ListCell;
 
 /**
  * Created by fritsc_h on 28/01/2017.
  */
-public class NewsListCell extends ListCell<String> {
+public class NewsListCell extends ListCell<News> {
     @Override
-    public void updateItem(String string, boolean empty)
+    public void updateItem(News news, boolean empty)
     {
-        super.updateItem(string,empty);
-        if(string != null)
+        super.updateItem(news,empty);
+        if(news != null)
         {
             Data data = new Data();
-            data.setInfo(string);
+            data.setInfo(news);
             setGraphic(data.getBox());
         }
     }

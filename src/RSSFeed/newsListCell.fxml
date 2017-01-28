@@ -1,10 +1,16 @@
-<?import RSSFeed.Data?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.control.Label?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<HBox xmlns:fx="http://javafx.com/fxml" fx:id="hBox">
-    <children>
-        <Label  fx:id="label1"/>
-        <Label  fx:id="label2"/>
-    </children>
-</HBox>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.web.WebView?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Region?>
+<VBox fx:id="vBox" stylesheets="@View/Style.css" xmlns:fx="http://javafx.com/fxml/1" minWidth="100" xmlns="http://javafx.com/javafx/8.0.112">
+    <HBox fx:id="hBox" prefWidth="-Infinity">
+        <Label fx:id="label1" />
+        <Region HBox.hgrow="ALWAYS"/>
+        <Label fx:id="label2" textAlignment="RIGHT"/>
+    </HBox>
+    <Label fx:id="description" />
+</VBox>
