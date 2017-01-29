@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vBox" minWidth="100" maxWidth="400" style="-fx-background-color: #F5F5F5;-fx-background-radius: 5px;" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
+        <Label fx:id="label1" textFill="#5c6773">
+         <font>
+            <Font name="GTWalsheim-Medium" size="14.0" />
+         </font></Label>
+</VBox>

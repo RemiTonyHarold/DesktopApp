@@ -32,7 +32,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
 
-public class NewsListController {
+public class NewsListController implements CategoryChooser.CategoryChoosed {
     public WebView webview;
     public Label webviewTitleLabel;
     public ListView lvNews;
@@ -58,16 +58,6 @@ public class NewsListController {
                 webviewTitleLabel.setText("Chargement de " + selectedNews.getTitle());
             }
         });
-        webview.getEngine().getLoadWorker().stateProperty().addListener(
-                (ObservableValue<? extends Worker.State> observable,
-                 Worker.State oldValue,
-                 Worker.State newValue) -> {
-                    if( newValue != Worker.State.SUCCEEDED ) {
-                        return;
-                    }
-                    webviewTitleLabel.setText(selectedNews.getTitle());
-                    // Your logic here
-                });
     }
 
     @FXML
@@ -77,14 +67,15 @@ public class NewsListController {
         filterButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                System.out.println("should display categories");
                 try {
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/categoryChooser.fxml"));
                     loader.load();
                     CategoryChooser controller = loader.getController();
+                    controller.setDelegate(NewsListController.this);
                     Stage newStage = new Stage();
 
-                    Scene stageScene = new Scene(loader.getRoot(), 300, 300);
+                    Scene stageScene = new Scene(loader.getRoot(), 400, 400);
+                    controller.setStage(newStage);
                     newStage.setScene(stageScene);
                     newStage.setTitle("Choose a category");
                     newStage.show();
@@ -97,6 +88,17 @@ public class NewsListController {
         cacheCategories();
         setListView();
         refreshNews();
+        webview.getEngine().getLoadWorker().stateProperty().addListener(
+                (ObservableValue<? extends Worker.State> observable,
+                 Worker.State oldValue,
+                 Worker.State newValue) -> {
+                    if( newValue != Worker.State.SUCCEEDED ) {
+                        return;
+                    }
+                    webviewTitleLabel.setText(selectedNews.getTitle());
+                    // Your logic here
+                });
+
     }
 
     private void loadNewses() {
@@ -179,5 +181,17 @@ public class NewsListController {
         }
         rd.close();
         return result.toString();
+    }
+
+    @Override
+    public void didChooseCategory(Category category) {
+        Session session = HibernateHelper.getSession();
+        String hql = "FROM News WHERE categoryId LIKE '" + category.getId() + "' ORDER BY pubDate DESC";
+        Query query = session.createQuery(hql);
+        List results = query.getResultList();
+        observableList.clear();
+        observableList.setAll(results);
+        lvNews.setItems(observableList);
+
     }
 }
