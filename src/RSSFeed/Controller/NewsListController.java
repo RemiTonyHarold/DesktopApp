@@ -12,11 +12,14 @@ import javafx.concurrent.Worker;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.web.WebView;
+import javafx.stage.Stage;
 import javafx.util.Callback;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -35,6 +38,7 @@ public class NewsListController {
     public ListView lvNews;
     public News selectedNews;
     public Button filterButton;
+
 
     private ObservableList<News> observableList = FXCollections.observableArrayList();
 
@@ -74,6 +78,19 @@ public class NewsListController {
             @Override
             public void handle(ActionEvent event) {
                 System.out.println("should display categories");
+                try {
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/categoryChooser.fxml"));
+                    loader.load();
+                    CategoryChooser controller = loader.getController();
+                    Stage newStage = new Stage();
+
+                    Scene stageScene = new Scene(loader.getRoot(), 300, 300);
+                    newStage.setScene(stageScene);
+                    newStage.setTitle("Choose a category");
+                    newStage.show();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
         loadNewses();
