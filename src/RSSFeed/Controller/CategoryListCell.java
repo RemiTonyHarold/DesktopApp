@@ -1,9 +1,7 @@
 package RSSFeed.Controller;
 
-import RSSFeed.CategoryAdapter;
-import RSSFeed.Data;
+import RSSFeed.Adapter.CategoryAdapter;
 import RSSFeed.Model.Category;
-import RSSFeed.Model.News;
 import javafx.scene.control.ListCell;
 
 /**

@@ -10,7 +10,7 @@
 <?import javafx.scene.control.Button?>
 <HBox stylesheets="@Style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.112" fx:controller="RSSFeed.Controller.NewsListController">
     <VBox maxWidth="400" minWidth="400"  prefHeight="Infinity" prefWidth="400" >
-        <HBox maxHeight="50.0" minHeight="50.0" prefHeight="50.0" maxWidth="400" minWidth="400" prefWidth="400"  alignment="CENTER">
+        <HBox maxHeight="50.0" minHeight="50.0" prefHeight="50.0" maxWidth="400" minWidth="400" prefWidth="400"  alignment="CENTER_LEFT" style="-fx-padding: 20px;">
             <Button fx:id="filterButton"  HBox.hgrow="ALWAYS" alignment="CENTER" contentDisplay="CENTER" textAlignment="CENTER" textFill="#5c6773">
                 <font>
                     <Font name="GTWalsheim-Medium" size="14.0" />

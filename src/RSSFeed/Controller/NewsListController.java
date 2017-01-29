@@ -1,6 +1,6 @@
 package RSSFeed.Controller;
 
-import RSSFeed.HibernateHelper;
+import RSSFeed.Utils.HibernateHelper;
 import RSSFeed.Model.Category;
 import RSSFeed.Model.News;
 import com.google.gson.Gson;
@@ -22,7 +22,6 @@ import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
@@ -53,6 +52,9 @@ public class NewsListController implements CategoryChooser.CategoryChoosed {
         lvNews.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                if (newValue.intValue() == -1) {
+                    return;
+                }
                 selectedNews = observableList.get(newValue.intValue());
                 webview.getEngine().load(selectedNews.getLink());
                 webviewTitleLabel.setText("Chargement de " + selectedNews.getTitle());

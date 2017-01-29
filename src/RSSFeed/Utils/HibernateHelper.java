@@ -1,4 +1,4 @@
-package RSSFeed;
+package RSSFeed.Utils;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Metamodel;
