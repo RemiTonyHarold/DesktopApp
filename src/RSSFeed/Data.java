@@ -6,9 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.control.Label;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.web.WebView;
 
 import java.io.IOException;
 import java.util.Date;
@@ -28,7 +26,7 @@ public class Data {
 
     public Data()
     {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("newsListCell.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("View/newsListCell.fxml"));
         fxmlLoader.setController(this);
         try
         {

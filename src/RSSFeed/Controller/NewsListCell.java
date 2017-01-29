@@ -1,5 +1,6 @@
-package RSSFeed;
+package RSSFeed.Controller;
 
+import RSSFeed.Data;
 import RSSFeed.Model.News;
 import javafx.scene.control.ListCell;
 

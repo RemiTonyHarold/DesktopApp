@@ -1,4 +1,4 @@
-package RSSFeed;
+package RSSFeed.Controller;
 
 import RSSFeed.Model.News;
 import com.google.gson.Gson;
@@ -18,12 +18,8 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.ResourceBundle;
 
-public class Controller {
+public class NewsListController {
     public WebView webview;
     public Label webviewTitleLabel;
     public ListView lvNews;

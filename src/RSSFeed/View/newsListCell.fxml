@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="vBox" minWidth="100" maxWidth="365.0" style="-fx-background-color: #F5F5F5;-fx-background-radius: 5px;" stylesheets="@View/Style.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:id="vBox" minWidth="100" maxWidth="365.0" style="-fx-background-color: #F5F5F5;-fx-background-radius: 5px;" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
     <HBox fx:id="hBox" prefWidth="-Infinity" maxWidth="365.0">
         <Label fx:id="label1" textFill="#5c6773">
          <font>

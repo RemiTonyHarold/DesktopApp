@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RSSFeed/Controller.java" afterPath="$PROJECT_DIR$/src/RSSFeed/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RSSFeed/View/Style.css" afterPath="$PROJECT_DIR$/src/RSSFeed/View/Style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RSSFeed/newsList.fxml" afterPath="$PROJECT_DIR$/src/RSSFeed/newsList.fxml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DesktopApp/RSSFeed/Controller$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DesktopApp/RSSFeed/Controller.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DesktopApp/RSSFeed/NewsListCell.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DesktopApp/RSSFeed/newsList.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DesktopApp/RSSFeed/newsListCell.fxml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/RSSFeed/Controller.java" afterPath="$PROJECT_DIR$/src/RSSFeed/Controller/NewsListController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/RSSFeed/NewsListCell.java" afterPath="$PROJECT_DIR$/src/RSSFeed/Controller/NewsListCell.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/RSSFeed/newsList.fxml" afterPath="$PROJECT_DIR$/src/RSSFeed/View/newsListController.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/RSSFeed/newsListCell.fxml" afterPath="$PROJECT_DIR$/src/RSSFeed/View/newsListCell.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DesktopApp/RSSFeed/Data.class" afterPath="$PROJECT_DIR$/out/production/DesktopApp/RSSFeed/Data.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DesktopApp/RSSFeed/Main.class" afterPath="$PROJECT_DIR$/out/production/DesktopApp/RSSFeed/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RSSFeed/Data.java" afterPath="$PROJECT_DIR$/src/RSSFeed/Data.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RSSFeed/Main.java" afterPath="$PROJECT_DIR$/src/RSSFeed/Main.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/src/RSSFeed/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Data.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Data.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/RSSFeed/Data.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="45" column="40" lean-forward="true" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
+            <state relative-caret-position="208">
+              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,7 +99,7 @@
         </entry>
       </file>
       <file leaf-file-name="newsListCell.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/RSSFeed/newsListCell.fxml">
+        <entry file="file://$PROJECT_DIR$/src/RSSFeed/View/newsListCell.fxml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
               <caret line="15" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
@@ -100,11 +111,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="newsList.fxml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/RSSFeed/newsList.fxml">
+      <file leaf-file-name="newsListController.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RSSFeed/View/newsListController.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="66" lean-forward="false" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="66" />
+            <state relative-caret-position="210">
+              <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -123,11 +134,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/RSSFeed/Controller.java">
+      <file leaf-file-name="NewsListController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RSSFeed/Controller/NewsListController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="58" column="38" lean-forward="true" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
+            <state relative-caret-position="420">
+              <caret line="54" column="38" lean-forward="false" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewsListCell.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RSSFeed/Controller/NewsListCell.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -184,6 +205,7 @@
         <option value="$PROJECT_DIR$/src/RSSFeed/View/Style.css" />
         <option value="$PROJECT_DIR$/src/RSSFeed/Controller.java" />
         <option value="$PROJECT_DIR$/src/RSSFeed/newsList.fxml" />
+        <option value="$PROJECT_DIR$/src/RSSFeed/View/newsListController.fxml" />
       </list>
     </option>
   </component>
@@ -329,6 +351,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DesktopApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DesktopApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RSSFeed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -357,6 +401,14 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="SearchEverywhereHistoryKey" value="News.java&#9;FILE&#9;file:///Users/fritsc_h/Documents/Études/EPITECH/Tek5/Java/DesktopApp/src/RSSFeed/Model/News.java" />
     <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="RSSFeed.Controller" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/RSSFeed/View" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -688,7 +740,7 @@
     <configuration default="false" name="Main" type="Application" factoryName="Application" singleton="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="RSSFeed.*" />
+          <option name="PATTERN" value="RSSFeed.Controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -733,12 +785,12 @@
       <workItem from="1485612835436" duration="223000" />
       <workItem from="1485616308699" duration="3206000" />
       <workItem from="1485628704628" duration="2538000" />
-      <workItem from="1485637439357" duration="5867000" />
+      <workItem from="1485637439357" duration="6839000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15423000" />
+    <option name="totallyTimeSpent" value="16395000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="837" extended-state="6" />
@@ -751,7 +803,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3294271" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3294271" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294271" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24930556" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
@@ -816,7 +868,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RSSFeed/newsListCell.fxml">
+    <entry file="file://$PROJECT_DIR$/src/RSSFeed/View/newsListCell.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
@@ -827,7 +879,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RSSFeed/newsList.fxml">
+    <entry file="file://$PROJECT_DIR$/src/RSSFeed/View/newsListController.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="5" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
@@ -864,8 +916,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RSSFeed/Controller.java" />
-    <entry file="file://$PROJECT_DIR$/src/RSSFeed/NewsListCell.java" />
+    <entry file="file://$PROJECT_DIR$/src/RSSFeed/Controller/NewsListController.java" />
+    <entry file="file://$PROJECT_DIR$/src/RSSFeed/Controller/NewsListCell.java" />
     <entry file="file://$PROJECT_DIR$/src/RSSFeed/Data.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -876,7 +928,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RSSFeed/newsListCell.fxml">
+    <entry file="file://$PROJECT_DIR$/src/RSSFeed/View/newsListCell.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -913,8 +965,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RSSFeed/Controller.java" />
-    <entry file="file://$PROJECT_DIR$/src/RSSFeed/newsListCell.fxml">
+    <entry file="file://$PROJECT_DIR$/src/RSSFeed/Controller/NewsListController.java" />
+    <entry file="file://$PROJECT_DIR$/src/RSSFeed/View/newsListCell.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
@@ -925,7 +977,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RSSFeed/NewsListCell.java" />
+    <entry file="file://$PROJECT_DIR$/src/RSSFeed/Controller/NewsListCell.java" />
     <entry file="file://$PROJECT_DIR$/src/RSSFeed/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -936,8 +988,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RSSFeed/Controller.java" />
-    <entry file="file://$PROJECT_DIR$/src/RSSFeed/newsListCell.fxml">
+    <entry file="file://$PROJECT_DIR$/src/RSSFeed/Controller/NewsListController.java" />
+    <entry file="file://$PROJECT_DIR$/src/RSSFeed/View/newsListCell.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
@@ -948,7 +1000,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RSSFeed/NewsListCell.java" />
+    <entry file="file://$PROJECT_DIR$/src/RSSFeed/Controller/NewsListCell.java" />
     <entry file="file://$PROJECT_DIR$/src/RSSFeed/Data.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -959,7 +1011,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RSSFeed/newsList.fxml">
+    <entry file="file://$PROJECT_DIR$/src/RSSFeed/View/newsListController.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
@@ -980,8 +1032,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RSSFeed/Controller.java" />
-    <entry file="file://$PROJECT_DIR$/src/RSSFeed/newsList.fxml">
+    <entry file="file://$PROJECT_DIR$/src/RSSFeed/Controller/NewsListController.java" />
+    <entry file="file://$PROJECT_DIR$/src/RSSFeed/View/newsListController.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
@@ -992,22 +1044,11 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RSSFeed/NewsListCell.java" />
     <entry file="file://$PROJECT_DIR$/src/RSSFeed/Model/News.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RSSFeed/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="45" column="40" lean-forward="true" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1023,16 +1064,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RSSFeed/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/RSSFeed/View/Style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1041,7 +1072,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RSSFeed/newsListCell.fxml">
+    <entry file="file://$PROJECT_DIR$/src/RSSFeed/View/newsListCell.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
@@ -1052,23 +1083,51 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RSSFeed/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/RSSFeed/View/newsListController.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="58" column="38" lean-forward="true" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RSSFeed/newsList.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="66" lean-forward="false" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="66" />
+        <state relative-caret-position="210">
+          <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
           <folding />
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RSSFeed/Controller/NewsListController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="54" column="38" lean-forward="false" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RSSFeed/Controller/NewsListCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RSSFeed/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RSSFeed/Data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>
