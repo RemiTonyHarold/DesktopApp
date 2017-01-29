@@ -1,15 +1,24 @@
 package RSSFeed.Model;
 
+import org.hibernate.annotations.Type;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Date;
 
 /**
  * Created by fritsc_h on 28/01/2017.
  */
+@Entity
 public class News {
     private String creator;
     private String dateCreation;
+    @Column(length = 100000)
+    @Type(type = "org.hibernate.type.TextType")
     private String description;
     private String guid;
+    @Id
     private String id;
     private String categoryId;
     private String link;
@@ -22,6 +31,9 @@ public class News {
         this.description = description;
         this.pubDate = pubDate;
         this.title = title;
+    }
+
+    public News() {
     }
 
     public String getCreator() {
